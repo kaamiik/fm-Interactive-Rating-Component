@@ -1,0 +1,15 @@
+$primary-orange: hsl(25, 97%, 53%);
+
+$neutral-white: hsl(0, 0%, 100%);
+$neutral-light-grey: hsl(217, 12%, 63%);
+$neutral-medium-grey: hsl(216, 12%, 54%);
+$neutral-dark-blue: hsl(213, 19%, 18%);
+$neutral-very-dark-blue: hsl(216, 12%, 8%);
+
+$gradient-dark-blue: linear-gradient(
+  180deg,
+  hsl(215, 20%, 17%) 0%,
+  hsl(215, 24%, 12%) 100%
+);
+
+$font-stack: "Overpass", sans-serif;

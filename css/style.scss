@@ -1,0 +1,235 @@
+@use "variables" as *;
+@use "typography";
+@use "breakpoints" as *;
+@use "functions" as *;
+
+body {
+  background-color: $neutral-very-dark-blue;
+  font-family: $font-stack;
+  font-size: rem(14);
+  color: white;
+
+  @include breakpoint(medium) {
+    font-size: rem(15);
+  }
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 rem(24);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.card {
+  max-width: rem(327);
+  background: $gradient-dark-blue;
+  border-radius: rem(15);
+  padding: rem(24);
+  padding-bottom: rem(32);
+
+  @include breakpoint(medium) {
+    max-width: rem(412);
+    border-radius: rem(30);
+    padding: rem(32);
+  }
+}
+
+/* ---------------------------------- */
+// Feedback page
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-form__star {
+  width: 40px;
+  height: 40px;
+  padding: rem(13.33);
+  background-color: $neutral-dark-blue;
+  border-radius: rem(20);
+  align-self: flex-start;
+
+  @include breakpoint(medium) {
+    width: 48px;
+    height: 48px;
+    padding: rem(16);
+  }
+}
+
+.feedback-form__title {
+  margin-top: rem(16);
+  font-weight: 700;
+  font-size: rem(24);
+  display: block;
+
+  @include breakpoint(medium) {
+    margin-top: rem(30);
+    font-size: rem(28);
+  }
+}
+
+.feedback-form__description {
+  margin-top: rem(10);
+  line-height: calc(22 / 14);
+  color: $neutral-light-grey;
+
+  @include breakpoint(medium) {
+    margin-top: rem(15);
+    line-height: calc(24 / 15);
+  }
+}
+
+.feedback-form__ratings {
+  margin-top: rem(24);
+  display: flex;
+  gap: rem(18);
+
+  input[type="radio"] {
+    display: none;
+
+    @include breakpoint(medium) {
+      &:hover + label,
+      &:focus + label {
+        background-color: $primary-orange;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+
+  label {
+    display: grid;
+    place-content: center;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background-color: $neutral-dark-blue;
+    color: $neutral-medium-grey;
+    font-weight: 700;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.17px;
+    transition: all 0.3s;
+
+    @include breakpoint(medium) {
+      width: 51px;
+      height: 51px;
+      font-size: rem(16);
+      line-height: calc(24 / 16);
+      letter-spacing: 0.2px;
+    }
+  }
+
+  input[type="radio"]:checked + label {
+    background-color: $neutral-medium-grey;
+    color: white;
+  }
+
+  @include breakpoint(medium) {
+    gap: rem(21);
+  }
+}
+
+.feedback-form__submit {
+  margin-top: rem(24);
+  background-color: $primary-orange;
+  border-radius: rem(22.5);
+  padding: rem(10);
+  padding-top: rem(12);
+  border: none;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1.87px;
+  text-transform: uppercase;
+
+  @include breakpoint(medium) {
+    margin-top: rem(32);
+    letter-spacing: 2px;
+
+    &:hover,
+    &:focus {
+      background-color: white;
+      color: $primary-orange;
+      cursor: pointer;
+    }
+  }
+}
+
+/* ---------------------------------- */
+// Thank you page
+.thank-you {
+  text-align: center;
+}
+
+.thank-you__icon {
+  margin-inline: auto;
+  margin-top: rem(10);
+  transform: translateX(-1px);
+  width: 144px;
+  height: 96px;
+
+  @include breakpoint(medium) {
+    margin-top: rem(13);
+    width: 162px;
+    height: 108px;
+  }
+}
+
+.thank-you__rating {
+  margin-top: rem(24);
+  background-color: $neutral-dark-blue;
+  width: fit-content;
+  margin-inline: auto;
+  padding: rem(6) rem(12);
+  padding-bottom: rem(4);
+  border-radius: rem(22.5);
+  color: $primary-orange;
+  line-height: calc(22 / 14);
+
+  @include breakpoint(medium) {
+    margin-top: rem(32);
+    padding: rem(6) rem(20);
+    line-height: calc(24 / 15);
+  }
+}
+
+.thank-you__title {
+  margin-top: rem(24);
+  font-size: rem(24);
+
+  @include breakpoint(medium) {
+    margin-top: rem(32);
+    font-size: rem(28);
+  }
+}
+
+.thank-you__message {
+  margin-top: rem(10);
+  line-height: calc(22 / 14);
+  color: $neutral-light-grey;
+
+  @include breakpoint(medium) {
+    margin-top: rem(15);
+    line-height: calc(24 / 15);
+  }
+}
+/* Footer */
+.attribution {
+  font-size: rem(11);
+  text-align: center;
+}
+.attribution a {
+  color: $primary-orange;
+}
