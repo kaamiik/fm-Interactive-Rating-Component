@@ -8,7 +8,6 @@
 
 const ratingMessage = document.querySelector(".thank-you__rating");
 const searchParams = new URLSearchParams(window.location.search);
-console.log(searchParams);
 const rating = searchParams.get("rating");
 
 ratingMessage.textContent = `You selected ${rating} out of 5`;
