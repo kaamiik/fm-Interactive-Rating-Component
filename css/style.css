@@ -133,11 +133,11 @@ body {
 }
 
 /* ---------------------------------- */
+/* Feedback page */
 .feedback-form {
   display: flex;
   flex-direction: column;
 }
-
 .feedback-form__star {
   width: 40px;
   height: 40px;
@@ -153,7 +153,6 @@ body {
     padding: 1rem;
   }
 }
-
 .feedback-form__title {
   margin-top: 1rem;
   font-weight: 700;
@@ -166,7 +165,6 @@ body {
     font-size: 1.75rem;
   }
 }
-
 .feedback-form__description {
   margin-top: 0.625rem;
   line-height: 1.5714285714;
@@ -178,7 +176,6 @@ body {
     line-height: 1.6;
   }
 }
-
 .feedback-form__ratings {
   margin-top: 1.5rem;
   display: flex;
@@ -226,7 +223,6 @@ body {
     gap: 1.3125rem;
   }
 }
-
 .feedback-form__submit {
   margin-top: 1.5rem;
   background-color: hsl(25, 97%, 53%);
@@ -252,10 +248,10 @@ body {
 }
 
 /* ---------------------------------- */
+/* Thank you page */
 .thank-you {
   text-align: center;
 }
-
 .thank-you__icon {
   margin-inline: auto;
   margin-top: 0.625rem;
@@ -270,7 +266,6 @@ body {
     height: 108px;
   }
 }
-
 .thank-you__rating {
   margin-top: 1.5rem;
   background-color: hsl(213, 19%, 18%);
@@ -289,7 +284,6 @@ body {
     line-height: 1.6;
   }
 }
-
 .thank-you__title {
   margin-top: 1.5rem;
   font-size: 1.5rem;
@@ -300,7 +294,6 @@ body {
     font-size: 1.75rem;
   }
 }
-
 .thank-you__message {
   margin-top: 0.625rem;
   line-height: 1.5714285714;
