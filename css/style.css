@@ -88,6 +88,18 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 body {
   background-color: hsl(216, 12%, 8%);
   font-family: "Overpass", sans-serif;
@@ -179,10 +191,8 @@ body {
 .feedback-form__ratings {
   margin-top: 1.5rem;
   display: flex;
-  gap: 1.125rem;
-}
-.feedback-form__ratings input[type=radio] {
-  display: none;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 @media (min-width: 28.75rem) {
   .feedback-form__ratings input[type=radio]:hover + label, .feedback-form__ratings input[type=radio]:focus + label {
@@ -217,11 +227,6 @@ body {
 .feedback-form__ratings input[type=radio]:checked + label {
   background-color: hsl(216, 12%, 54%);
   color: white;
-}
-@media (min-width: 28.75rem) {
-  .feedback-form__ratings {
-    gap: 1.3125rem;
-  }
 }
 .feedback-form__submit {
   margin-top: 1.5rem;
